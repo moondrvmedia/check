@@ -1,4 +1,5 @@
 <?php
+# include DB Connection file
 include "/home/tatevik/webapps/app-collier/check/db_connect/db_connnection.php";?>
 <html>
     <head>
@@ -32,21 +33,21 @@ include "/home/tatevik/webapps/app-collier/check/db_connect/db_connnection.php";
 	<script src="../build/jquery.datetimepicker.full.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
-		 $('#date_timepicker_start').datetimepicker({
-			 formatTime:'H',
-		  onShow:function( ct ){
-		   this.setOptions({
-			maxDate:$('#date_timepicker_end').val()?$('#date_timepicker_end').val():false
-		   })
-		  },
-		 });
-		 $('#date_timepicker_end').datetimepicker({
-		  onShow:function( ct ){
-		   this.setOptions({
-			minDate:$('#date_timepicker_start').val()?$('#date_timepicker_start').val():false
-		   })
-		  },
-		 });
+			$('#date_timepicker_start').datetimepicker({
+				formatTime:'H',
+				onShow:function( ct ){
+					this.setOptions({
+						maxDate:$('#date_timepicker_end').val()?$('#date_timepicker_end').val():false
+					})
+				},
+			});
+			$('#date_timepicker_end').datetimepicker({
+				onShow:function( ct ){
+					this.setOptions({
+						minDate:$('#date_timepicker_start').val()?$('#date_timepicker_start').val():false
+					})
+				},
+			});
 		});
 		$("#check_phone").submit(function(event){
 			event.preventDefault();
