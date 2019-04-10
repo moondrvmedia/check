@@ -1,4 +1,5 @@
 <?php
+#include DB connection
 include "/home/tatevik/webapps/app-collier/check/db_connect/db_connnection.php";
 $status = $_POST['status'];
 $phone = mysqli_real_escape_string($conn, $_POST['phone']);
@@ -29,6 +30,8 @@ if($_POST['start'] && $_POST['end'] && $_POST['status']){
 		} else {
 			echo "No rows for the period from $start to $end with status = $status in DB<br><br>";
 		}	
+	} else {
+		echo "Could not run the query";
 	}
 }
 ?>
