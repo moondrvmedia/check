@@ -4,7 +4,7 @@ $username = "dev_tatevik";
 $password = "E~iS=?A0bls517n@JiWbTINcEcbGgP9j";
 $dbname = "leadbase";
 
-// Create connection
+// Create connection to DB
 $conn = new mysqli($servername, $username, $password);
 
 // Check connection
