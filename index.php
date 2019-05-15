@@ -1,5 +1,6 @@
 <?php
 # include DB Connection file
+#upload to server test
 include "/home/tatevik/webapps/app-collier/check/db_connect/db_connnection.php";?>
 <html>
     <head>
